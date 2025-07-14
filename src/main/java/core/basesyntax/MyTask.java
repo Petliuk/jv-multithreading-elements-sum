@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.concurrent.RecursiveTask;
 
 public class MyTask extends RecursiveTask<Long> {
+
+    private static final int THRESHOLD = 10;
     private final int startPoint;
     private final int finishPoint;
-    private static final int THRESHOLD = 10;
 
     public MyTask(int startPoint, int finishPoint) {
         this.startPoint = startPoint;
